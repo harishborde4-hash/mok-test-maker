@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --background: #09090b;
+  --foreground: #ededed;
+  --card: #18181b;
+  --card-border: #27272a;
+  --primary: #3b82f6;
+}
+
+body {
+  font-family: var(--font-geist-sans);
+}
+
+.glass {
+  background: rgba(24, 24, 27, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(63, 63, 70, 0.6);
+}
+
+.question-card {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.question-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.chapter-tag {
+  font-size: 0.75rem;
+  padding: 1px 8px;
+  border-radius: 9999px;
+  background: #27272a;
+  color: #a1a1aa;
+}
+
+.option {
+  transition: all 0.1s ease;
+}
+
+.option:hover {
+  background-color: #27272a;
+}
+
+.option.selected {
+  background-color: #1e40af;
+  border-color: #3b82f6;
+}
+
+.correct {
+  background-color: #14532d !important;
+  border-color: #22c55e !important;
+}
+
+.incorrect {
+  background-color: #431407 !important;
+  border-color: #ef4444 !important;
+}
+
+.subject-badge {
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.math { background: #1e40af; color: white; }
+.physics { background: #6b21a8; color: white; }
+.chemistry { background: #166534; color: white; }
+
+.test-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.test-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #18181b;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
